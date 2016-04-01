@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app = "" ng-init="datos = [{name:'Viktor',contry:'Mexico'},
-												{name:'Doe',contry:'Africa'},
-												{name:'Noel',contry:'USA'}]">
+<html lang="en" >
 <head>
 	
 	<meta charset="UTF-8">
@@ -11,19 +9,21 @@
 </head>
 <body  >
 	<div class="container-fluid">
-		<h1>Repeat In angular </small></h1>
-		<ul>
-			<li ng-repeat = "dato in datos">
-				{{dato.name}} {{dato.contry}}
-			</li>
-		</ul>
+		<h1>Angular Model</h1>
+		<div ng-app="myApp" ng-controller="myCtrl" >
+			Name <input class="form-control" ng-model="name"></input>
+		</div>
 
 	</div>  <!-- .container-fluid -->
-	
 	<script type="text/javascript" src="js/angular.min.js"></script>	
 	<script type="text/javascript">
-		
+		// Creamos en modelo que contiene el nombre de ng-app
+		var app = angular.module('myApp', []);
+		// creamos el controlador con su nombre y la funcion
+		app.controller('myCtrl',function($scope){
+			$scope.name = "Viktor";
 
+		});
 	</script>
 </body>
 </html>
