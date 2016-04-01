@@ -5,12 +5,17 @@
 	<meta charset="UTF-8">
 	<title>Curso de Angular</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="js/angular.min.js">
 </head>
-<body>
+<body ng-app  ng-init=" Creadores ='Hevery y Adams Abrons'">
 	<div class="container-fluid">
-		<h1>Curso de angular</h1>		
-
+		<h1>Curso de angular</h1>
+		<h2>Mi primera aplicacion en <small>Angularjs</small></h2>		
+		
+		<p class="lead">
+			Angular fue creado por {{Creadores}} hace solo {{ 2014-2009}} anos
+		</p> <!-- .lead -->
+		
 	</div>  <!-- .container-fluid -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
 </body>
 </html>
