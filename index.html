@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" ng-app = "" ng-init="quantity=1; price=5">
+<html lang="en" ng-app = "" ng-init="datos = [{name:'Viktor',contry:'Mexico'},
+												{name:'Doe',contry:'Africa'},
+												{name:'Noel',contry:'USA'}]">
 <head>
 	
 	<meta charset="UTF-8">
@@ -9,15 +11,13 @@
 </head>
 <body  >
 	<div class="container-fluid">
-		<h1> Data Binding <small>Controllers y Scope</small></h1>
-		
-		<input type="number" class=form-control ng-model="quantity"></input>		
-		<br>
-		<input type="number" class=form-control ng-model="price"></input>		
-		
-		<p class="lead">
-			Result {{quantity * price }}
-		</p> <!-- .lead -->
+		<h1>Repeat In angular </small></h1>
+		<ul>
+			<li ng-repeat = "dato in datos">
+				{{dato.name}} {{dato.contry}}
+			</li>
+		</ul>
+
 	</div>  <!-- .container-fluid -->
 	
 	<script type="text/javascript" src="js/angular.min.js"></script>	
