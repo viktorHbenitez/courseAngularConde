@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app = "">
+<html lang="en" ng-app = "" ng-init="quantity=1; price=5">
 <head>
 	
 	<meta charset="UTF-8">
@@ -9,11 +9,14 @@
 </head>
 <body  >
 	<div class="container-fluid">
-		<h1> 2 Curso de angular <small>Controllers y Scope</small></h1>
+		<h1> Data Binding <small>Controllers y Scope</small></h1>
 		
-		<input type="text" class=form-control placeholder="Introduce algo" ng-model="name"></input>		
-		<p class="lead" ng-bind="name">
-			<!-- {{alumno.nombre}} estudia en {{alumno.curso}} -->
+		<input type="number" class=form-control ng-model="quantity"></input>		
+		<br>
+		<input type="number" class=form-control ng-model="price"></input>		
+		
+		<p class="lead">
+			Result {{quantity * price }}
 		</p> <!-- .lead -->
 	</div>  <!-- .container-fluid -->
 	
