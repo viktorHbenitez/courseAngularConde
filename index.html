@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" ng-app="myApp">
 <head>
 	
 	<meta charset="UTF-8">
@@ -7,23 +7,18 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 </head>
-<body  >
+<body  ng-controller="AlumnosCtrl">
 	<div class="container-fluid">
-		<h1>Angular Model</h1>
-		<div ng-app="myApp" ng-controller="myCtrl" >
-			Name <input class="form-control" ng-model="name"></input>
+		<h1>Cuaderno Alumnos</h1>
+		<div>
+			<div ng-repeat = "alumno in alumnos">
+				<div>{{alumno.nombre}} - {{alumno.telefono}}</div>
+				<h3><span class="label label-success">{{alumno.curso}}</span></h3>
+			</div>
 		</div>
 
 	</div>  <!-- .container-fluid -->
 	<script type="text/javascript" src="js/angular.min.js"></script>	
-	<script type="text/javascript">
-		// Creamos en modelo que contiene el nombre de ng-app
-		var app = angular.module('myApp', []);
-		// creamos el controlador con su nombre y la funcion
-		app.controller('myCtrl',function($scope){
-			$scope.name = "Viktor";
-
-		});
-	</script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
