@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app = "">
 <head>
 	
 	<meta charset="UTF-8">
 	<title>Curso de Angular</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
 </head>
-<body ng-app  ng-init=" Creadores ='Hevery y Adams Abrons'">
+<body  >
 	<div class="container-fluid">
-		<h1>Curso de angular</h1>
-		<h2>Mi primera aplicacion en <small>Angularjs</small></h2>		
+		<h1> 2 Curso de angular <small>Controllers y Scope</small></h1>
 		
-		<p class="lead">
-			Angular fue creado por {{Creadores}} hace solo {{ 2014-2009}} anos
+		<input type="text" class=form-control placeholder="Introduce algo" ng-model="name"></input>		
+		<p class="lead" ng-bind="name">
+			<!-- {{alumno.nombre}} estudia en {{alumno.curso}} -->
 		</p> <!-- .lead -->
-		
 	</div>  <!-- .container-fluid -->
-	<script type="text/javascript" src="js/angular.min.js"></script>
+	
+	<script type="text/javascript" src="js/angular.min.js"></script>	
+	<script type="text/javascript">
+		
+
+	</script>
 </body>
 </html>
