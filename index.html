@@ -5,13 +5,14 @@
 	<meta charset="UTF-8">
 	<title>Curso de Angular</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body  ng-controller="AlumnosCtrl">
 	<div class="container-fluid">
 		<h1>Cuaderno Alumnos</h1>
-		<div>
-			<div ng-repeat = "alumno in alumnos">
+		<div class="wrapper">
+			<div class="contact-item" ng-repeat = "alumno in alumnos">
 				<div>{{alumno.nombre}} - {{alumno.telefono}}</div>
 				<h3><span class="label label-success">{{alumno.curso}}</span></h3>
 			</div>
